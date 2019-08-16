@@ -30,12 +30,12 @@ class Instructor extends Person {
 }
 
 class Student extends Person {
-  constructor(pupil) {
-    super(pupil);
-    this.name = pupil.name;
-    this.previousBackground = pupil.previousBackground;
-    this.className = pupil.className;
-    this.subject = pupil.subject;
+  constructor(student) {
+    super(student);
+    this.name = student.name;
+    this.previousBackground = student.previousBackground;
+    this.className = student.className;
+    this.subject = student.subject;
     this.favSubjects = ["HTML", "CSS", "Python"];
   }
 
@@ -48,11 +48,11 @@ class Student extends Person {
   }
 
   PRAssignment() {
-    console.log(`${pupil.name} has submitted a PR for ${pupil.subject}.`);
+    console.log(`${this.name} has submitted a PR for ${subject}.`);
   }
 
   sprintChallenge() {
-    console.log(`${pupil.name} has begun sprint challenge on ${pupil.subject}`);
+    console.log(`${this.name} has begun sprint challenge on ${subject}`);
   }
 }
 
@@ -69,7 +69,7 @@ class ProjectManager extends Instructor {
   }
 
   debugsCode() {
-    console.log(`${pm.name} debugs ${pupil.name}'s code on ${subject}.`);
+    console.log(`${pm.name} debugs ${student.name}'s code on ${subject}.`);
   }
 }
 
